@@ -9,9 +9,15 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text("Dashboard"),
+          backgroundColor: Colors.black,
+        ),
         body: Container(
+            child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                   onPressed: () {
@@ -27,6 +33,6 @@ class Dashboard extends StatelessWidget {
                   child: Text("Audio"))
             ],
           ),
-        ));
+        )));
   }
 }

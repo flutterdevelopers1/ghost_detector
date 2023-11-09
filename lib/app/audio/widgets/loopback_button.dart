@@ -23,7 +23,7 @@ class _LoopbackButtonState extends State<LoopbackButton> {
       },
       icon: Icon(
         widget.recorder.loopback ? Icons.volume_up : Icons.volume_off,
-        color: widget.recorder.loopback ? Colors.cyan : Colors.grey,
+        color: widget.recorder.loopback ? Colors.cyan : Colors.white,
       ),
     );
   }

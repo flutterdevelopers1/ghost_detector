@@ -14,6 +14,7 @@ class Visuals extends StatefulWidget {
 }
 
 class _VisualsState extends State<Visuals> {
+  MagnitudeProvider? model;
   late ChartSeriesController _chartSeriesController;
   @override
   void initState() {
@@ -98,14 +99,29 @@ class _VisualsState extends State<Visuals> {
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              height: 40,
-              width: 300,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey.shade800),
-              child: Center(child: Text('💡 More Visuals Coming Soon!')),
-            )
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                height: 40,
+                width: 300,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.shade800),
+                //   child: Center(
+                //       // child: Text('Result: ${model.magnitude.toStringAsFixed(2)}')),
+                // )
+                // child: Text('Result ${model!.magnitude!.toStringAsFixed(2)}'),
+                child: Column(
+                  children: [
+                    model?.magnitude == 0
+                        ? Text(
+                            'Result: Moderate Or Danger',
+                            style: TextStyle(color: Colors.red),
+                          )
+                        : Text(
+                            "Result: Safe",
+                            style: TextStyle(color: Colors.white),
+                          )
+                  ],
+                ))
           ]),
         ),
       ),

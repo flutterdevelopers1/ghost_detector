@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:ghost_detector/app/audio/recorder/audio_recorder.dart';
 import 'package:ghost_detector/app/audio/recorder/record_repository.dart';
@@ -19,6 +20,7 @@ class AudioPage extends StatefulWidget {
 }
 
 class _AudioPageState extends State<AudioPage> {
+  int random = Random().nextInt(1000); //1000 is MAX value
   RecordRepository? recordRepo;
   final sourceFormat = const AudioFormat(
       sampleRate: 44100, channels: 2, sampleFormat: SampleFormat.float32);
@@ -76,8 +78,10 @@ class _AudioPageState extends State<AudioPage> {
     }
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Audio Recorder'),
+        backgroundColor: Colors.black,
       ),
       drawer: Drawer(
         child: RecordsListView(
@@ -90,6 +94,7 @@ class _AudioPageState extends State<AudioPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   children: [
@@ -104,7 +109,10 @@ class _AudioPageState extends State<AudioPage> {
                         },
                       ),
                     ),
-                    const Icon(Icons.mic),
+                    const Icon(
+                      Icons.mic,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
                 Column(
@@ -120,10 +128,23 @@ class _AudioPageState extends State<AudioPage> {
                         },
                       ),
                     ),
-                    const Icon(Icons.multitrack_audio_outlined),
+                    const Icon(
+                      Icons.multitrack_audio_outlined,
+                      color: Colors.white,
+                    ),
                   ],
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Center(
+              child: Text(
+                'Frequency: ${random}',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+              ),
             ),
             Expanded(
               child: RmsView(

@@ -3,10 +3,6 @@ import 'package:ghost_detector/app/emf/models/magnitudeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// void main() {
-//   runApp(new MyApp());
-// }
-
 class EmfPage extends StatelessWidget {
   const EmfPage({Key? key}) : super(key: key);
 
@@ -19,7 +15,7 @@ class EmfPage extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-          theme: ThemeData(fontFamily: 'DMSans', brightness: Brightness.light),
+          theme: ThemeData(fontFamily: 'DMSans', brightness: Brightness.dark),
           debugShowCheckedModeBanner: false,
           home: Home()),
     );
