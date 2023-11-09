@@ -35,6 +35,19 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  motion_sensors:
+  provider:
+  vector_math:
+  syncfusion_flutter_gauges:
+  syncfusion_flutter_charts:
+  path: ^1.8.2
+  audio_session: ^0.1.13
+  audio_service: ^0.18.9
+  freezed_annotation: ^2.2.0
+  permission_handler: ^10.2.0
+  path_provider: ^2.0.14
+  coast_audio_miniaudio:
+  flutter_coast_audio_miniaudio:
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +86,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+     - family: Schyler
+       fonts:
+         - asset: assets/DMSans-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ghost_detector/app/dashboard/dashboard.dart';
 import 'package:ghost_detector/app/home/home_page.dart';
 // import 'package:mynew_app/home_page.dart';
 
@@ -39,7 +40,7 @@ class _LoginSucessState extends State<LoginSucess> {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                          MaterialPageRoute(builder: (context) => Dashboard()));
                     },
                     style: ElevatedButton.styleFrom(primary: Colors.black),
                     child: Text("Continue"),
