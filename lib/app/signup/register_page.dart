@@ -13,6 +13,8 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -36,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(top: height * 0.1),
               child: Text(
                 "CREATE ACCOUNT",
                 style: TextStyle(
@@ -48,9 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
-                style: TextStyle(
-                    color: Colors.white70
-                ),
+                style: TextStyle(color: Colors.white70),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -67,9 +67,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
-                style: TextStyle(
-                    color: Colors.white70
-                ),
+                style: TextStyle(color: Colors.white70),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -87,9 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
               child: TextField(
-                style: TextStyle(
-                    color: Colors.white70
-                ),
+                style: TextStyle(color: Colors.white70),
                 obscureText: true,
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
@@ -182,9 +178,7 @@ Widget loginPage(BuildContext context) {
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10.0),
             child: TextField(
-              style: TextStyle(
-                  color: Colors.white70
-              ),
+              style: TextStyle(color: Colors.white70),
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white70),
@@ -202,9 +196,7 @@ Widget loginPage(BuildContext context) {
             padding:
                 const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
             child: TextField(
-              style: TextStyle(
-                  color: Colors.white70
-              ),
+              style: TextStyle(color: Colors.white70),
               obscureText: true,
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(

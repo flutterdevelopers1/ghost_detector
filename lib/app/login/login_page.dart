@@ -9,6 +9,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -22,17 +24,20 @@ class _LoginPageState extends State<LoginPage> {
               width: 500,
               fit: BoxFit.cover,
             ),
-            Center(
-              child: Text(
-                "GHOST DETECTOR",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white70),
+            Padding(
+              padding: EdgeInsets.only(top: height * 0.03),
+              child: Center(
+                child: Text(
+                  "GHOST DETECTOR",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white70),
+                ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.only(top: height * 0.1),
               child: Text(
                 "LOGIN",
                 style: TextStyle(
@@ -44,9 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
-                style: TextStyle(
-                  color: Colors.white70
-                ),
+                style: TextStyle(color: Colors.white70),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -64,9 +67,7 @@ class _LoginPageState extends State<LoginPage> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
               child: TextField(
-                style: TextStyle(
-                    color: Colors.white70
-                ),
+                style: TextStyle(color: Colors.white70),
                 obscureText: true,
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(

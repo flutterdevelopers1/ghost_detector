@@ -13,6 +13,8 @@ class SignupPage extends StatefulWidget {
 class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -41,7 +43,7 @@ class _SignupPageState extends State<SignupPage> {
                   width: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 420),
+                  padding: EdgeInsets.only(top: height * 0.66),
                   child: ElevatedButton(
                     style:
                         ElevatedButton.styleFrom(primary: Colors.transparent),

@@ -6,6 +6,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -32,7 +34,7 @@ class SplashScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              //Padding(padding: EdgeInsets.only(bottom: 80)),
+              Padding(padding: EdgeInsets.only(bottom: height * 0.15)),
               Text(
                 "LETS START",
                 style: TextStyle(

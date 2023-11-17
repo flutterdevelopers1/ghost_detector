@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ghost_detector/app/dashboard/about_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,7 +20,11 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Settings',style: TextStyle(fontWeight: FontWeight.w900,color: Colors.white70),),
+          title: Text(
+            'Settings',
+            style:
+                TextStyle(fontWeight: FontWeight.w900, color: Colors.white70),
+          ),
           backgroundColor: Colors.black,
         ),
         backgroundColor: Colors.black,
@@ -28,7 +33,7 @@ class _State extends State<MyApp> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 15,left: 15),
+                padding: const EdgeInsets.only(right: 15, left: 15),
                 child: Container(
                   color: Colors.white70,
                   child: ListTile(
@@ -46,53 +51,57 @@ class _State extends State<MyApp> {
                       activeColor: Colors.pink,
                     ),
                   ),
-
                 ),
-              ),Padding(padding: EdgeInsets.only(top: 20)),
+              ),
+              Padding(padding: EdgeInsets.only(top: 20)),
               Padding(
-                padding: const EdgeInsets.only(right: 15,left: 15),
+                padding: const EdgeInsets.only(right: 15, left: 15),
                 child: Container(
-                  color:Colors.white70,
+                  color: Colors.white70,
                   child: ListTile(
                     leading: Icon(Icons.privacy_tip_outlined),
                     title: Text("Privacy policy"),
                     trailing: Icon(Icons.keyboard_arrow_right),
-                    onTap: (){},
+                    onTap: () async {
+                      await launch(
+                          'https://raw.githubusercontent.com/flutterdevelopers1/ghost_detector/main/LICENSE');
+                    },
                   ),
                 ),
-              ),Padding(padding: EdgeInsets.only(top: 20)),
-
+              ),
+              Padding(padding: EdgeInsets.only(top: 20)),
               Padding(
-                padding: const EdgeInsets.only(right: 15,left: 15),
+                padding: const EdgeInsets.only(right: 15, left: 15),
                 child: Container(
-                  color:Colors.white70,
+                  color: Colors.white70,
                   child: ListTile(
                     leading: Icon(Icons.info_outline),
                     title: Text("About us "),
                     trailing: Icon(Icons.keyboard_arrow_right),
-                    onTap: (){
+                    onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => About()));
                     },
                   ),
                 ),
-              ),Padding(padding: EdgeInsets.only(top: 20)),
-
+              ),
+              Padding(padding: EdgeInsets.only(top: 20)),
               Padding(
-                padding: const EdgeInsets.only(right: 15,left: 15),
+                padding: const EdgeInsets.only(right: 15, left: 15),
                 child: Container(
-                  color:Colors.white70,
+                  color: Colors.white70,
                   child: ListTile(
                     leading: Icon(Icons.contact_mail),
                     title: Text("Contact us "),
                     trailing: Icon(Icons.keyboard_arrow_right),
-                    onTap: (){},
+                    onTap: () async {
+                      await launch('https://github.com');
+                    },
                   ),
                 ),
               ),
             ],
           ),
-        )
-    );
+        ));
   }
 }
