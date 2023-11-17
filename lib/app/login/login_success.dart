@@ -12,7 +12,7 @@ class _LoginSucessState extends State<LoginSucess> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.only(bottom: 50),
         child: Center(
@@ -20,8 +20,8 @@ class _LoginSucessState extends State<LoginSucess> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                  child: Image.network(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkXty8D87kNq7Mb9R5BCXjYPodIqH8w8OnBw&usqp=CAU")),
+                  child: Image.asset(
+                      "assets/success.png")),
               Text(
                 "Login Successfully!",
                 style: TextStyle(fontSize: 20),
@@ -42,8 +42,8 @@ class _LoginSucessState extends State<LoginSucess> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Dashboard()));
                     },
-                    style: ElevatedButton.styleFrom(primary: Colors.black),
-                    child: Text("Continue"),
+                    style: ElevatedButton.styleFrom(primary: Colors.white70),
+                    child: Text("Continue",style: TextStyle(color: Colors.black),),
                   ),
                 ),
               ),

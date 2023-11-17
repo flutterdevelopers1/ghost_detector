@@ -48,6 +48,14 @@ dependencies:
   path_provider: ^2.0.14
   coast_audio_miniaudio:
   flutter_coast_audio_miniaudio:
+  url_launcher: 6.0.0
+  flutter_switch: ^0.3.2
+
+
+
+
+
+
 
 dev_dependencies:
   flutter_test:

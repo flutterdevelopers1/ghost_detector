@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 650),
+                padding: const EdgeInsets.only(bottom: 600),
                 child: Center(
                   child: Text(
                     " GHOST DETECTOR",
@@ -32,7 +32,7 @@ class SplashScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(padding: EdgeInsets.only(bottom: 80)),
+              //Padding(padding: EdgeInsets.only(bottom: 80)),
               Text(
                 "LETS START",
                 style: TextStyle(

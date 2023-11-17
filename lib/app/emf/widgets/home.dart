@@ -42,7 +42,17 @@ class _HomeState extends State<Home> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Visuals()));
                     },
-                    child: Text('Visualize')),
+                    child: SizedBox(
+                      height: 30,
+                      width: 100,
+                      child: Container(
+                        color: Colors.white70,
+                          child: Center(child: Text('Visualize',style: TextStyle(color: Colors.black),))),
+                    )),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10)
+                ),
+
               ),
               SizedBox(
                 height: 10,
@@ -62,7 +72,19 @@ class _HomeState extends State<Home> {
                       onPressed: () {
                         model.changeValues();
                       },
-                      child: Text('Start')),
+                      child: SizedBox(
+                        height: 30,
+                        width: 100,
+                        child: Container(
+                          color: Colors.white70,
+                            child: Center(child: Text('Start',style: TextStyle(color: Colors.black),
+                            ),
+                            ),
+                        ),
+                      )),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
                 ),
               ),
 

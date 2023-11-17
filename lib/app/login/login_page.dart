@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Image.asset(
               "assets/login_ghost2.png",
-              height: 500,
+              height: 400,
               width: 500,
               fit: BoxFit.cover,
             ),
@@ -44,6 +44,9 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
+                style: TextStyle(
+                  color: Colors.white70
+                ),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -61,6 +64,9 @@ class _LoginPageState extends State<LoginPage> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
               child: TextField(
+                style: TextStyle(
+                    color: Colors.white70
+                ),
                 obscureText: true,
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(

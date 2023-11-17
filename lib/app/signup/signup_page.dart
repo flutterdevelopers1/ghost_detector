@@ -41,7 +41,7 @@ class _SignupPageState extends State<SignupPage> {
                   width: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 550),
+                  padding: const EdgeInsets.only(top: 420),
                   child: ElevatedButton(
                     style:
                         ElevatedButton.styleFrom(primary: Colors.transparent),

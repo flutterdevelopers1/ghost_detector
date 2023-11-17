@@ -8,7 +8,7 @@ class OtpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: SizedBox(
         child: Padding(
           padding: const EdgeInsets.only(top: 70),
@@ -37,7 +37,7 @@ class OtpPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "This code will expired in",
+                      "This code will expired in ",
                       style: TextStyle(color: Colors.grey),
                     ),
                     TweenAnimationBuilder(
@@ -45,7 +45,7 @@ class OtpPage extends StatelessWidget {
                       duration: Duration(seconds: 60),
                       builder: (context, value, child) => Text(
                           "00:${value.toInt()}",
-                          style: TextStyle(color: Colors.redAccent)),
+                          style: TextStyle(color: Colors.pinkAccent)),
                     ),
                   ],
                 ),
@@ -71,7 +71,7 @@ class OtpPage extends StatelessWidget {
                       "Resend OTP Code",
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Colors.redAccent),
+                          color: Colors.white70),
                     ),
                   ),
                 ),
@@ -116,11 +116,12 @@ class _OTPformState extends State<OTPform> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Row(
-        children: [
-          Container(
-            child: SizedBox(
-              width: 60,
+      child: Container(
+        color: Colors.transparent,
+        child: Row(
+          children: [
+            SizedBox(
+              width: 50,
               child: TextFormField(
                 keyboardType: TextInputType.number,
                 inputFormatters: [],
@@ -130,13 +131,14 @@ class _OTPformState extends State<OTPform> {
                 decoration: InputDecoration(
                   labelStyle: TextStyle(color: Colors.redAccent),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.white70),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

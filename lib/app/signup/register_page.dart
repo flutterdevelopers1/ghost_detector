@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             Image.asset(
               "assets/login_ghost2.png",
-              height: 500,
+              height: 375,
               width: 500,
               fit: BoxFit.cover,
             ),
@@ -48,6 +48,9 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
+                style: TextStyle(
+                    color: Colors.white70
+                ),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -64,6 +67,9 @@ class _RegisterPageState extends State<RegisterPage> {
             Padding(
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: TextField(
+                style: TextStyle(
+                    color: Colors.white70
+                ),
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white70),
@@ -81,6 +87,9 @@ class _RegisterPageState extends State<RegisterPage> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
               child: TextField(
+                style: TextStyle(
+                    color: Colors.white70
+                ),
                 obscureText: true,
                 decoration: InputDecoration(
                   focusedBorder: UnderlineInputBorder(
@@ -125,7 +134,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                   child: Text(
                     "Go Back",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    style: TextStyle(fontSize: 15, color: Colors.white70),
                   ),
                 ),
               ],
@@ -147,7 +156,7 @@ Widget loginPage(BuildContext context) {
         children: [
           Image.asset(
             "assets/login_ghost2.png",
-            height: 500,
+            height: 400,
             width: 500,
             fit: BoxFit.cover,
           ),
@@ -173,6 +182,9 @@ Widget loginPage(BuildContext context) {
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10.0),
             child: TextField(
+              style: TextStyle(
+                  color: Colors.white70
+              ),
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.white70),
@@ -190,6 +202,9 @@ Widget loginPage(BuildContext context) {
             padding:
                 const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
             child: TextField(
+              style: TextStyle(
+                  color: Colors.white70
+              ),
               obscureText: true,
               decoration: InputDecoration(
                 focusedBorder: UnderlineInputBorder(
